@@ -1,0 +1,5 @@
+[
+    { "directory": "/vagrant/src/discussion/2-make", "file": "tests/tests.cc", "output": "/tmp/tests-c4bb78.o", "arguments": ["/usr/lib/llvm-10/bin/clang", "-xc++", "tests/tests.cc", "--driver-mode=g++", "-std=c++20", "-stdlib=libc++", "-lc++abi", "-g", "-O0", "-Wall", "-Wextra", "-Werror", "-pedantic", "-I", "src/", "-I", "includes/", "-o", "bin/tests.out", "--target=x86_64-pc-linux-gnu"]},
+    { "directory": "/vagrant/src/discussion/2-make", "file": "src/point.cc", "output": "/tmp/point-aa1f1d.o", "arguments": ["/usr/lib/llvm-10/bin/clang", "-xc++", "src/point.cc", "--driver-mode=g++", "-std=c++20", "-stdlib=libc++", "-lc++abi", "-g", "-O0", "-Wall", "-Wextra", "-Werror", "-pedantic", "-I", "src/", "-I", "includes/", "-o", "bin/tests.out", "--target=x86_64-pc-linux-gnu"]},
+    { "directory": "/vagrant/src/discussion/2-make", "file": "main/point.cc", "output": "/tmp/point-aa1f1d.o", "arguments": ["/usr/lib/llvm-10/bin/clang", "-xc++", "src/main.cc", "--driver-mode=g++", "-std=c++20", "-stdlib=libc++", "-lc++abi", "-g", "-O0", "-Wall", "-Wextra", "-Werror", "-pedantic", "-I", "src/", "-I", "includes/", "-o", "bin/main.out", "--target=x86_64-pc-linux-gnu"]}
+]

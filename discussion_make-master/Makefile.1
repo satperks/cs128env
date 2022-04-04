@@ -1,0 +1,4 @@
+bin/main.out: src/main.cc
+	clang++ -std=c++20 -stdlib=libc++ -lc++abi -g -O0 \
+		-Wall -Wextra -Werror -pedantic \
+		src/main.cc -o bin/main.out
