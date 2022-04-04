@@ -1,0 +1,31 @@
+#include <fstream>
+#include <iostream>
+#include <string>
+
+#include "functions.hpp"
+#include "utilities.hpp"
+
+int main(int argc, char* argv[]) {
+  if (argc != 3) {
+    std::cerr << "Usage: " << argv[0] << " [input_file] [dna_sequence]"
+              << std::endl;
+    return 1;
+  }
+
+  std::string dna_sequence = argv[2];
+  std::vector<std::string> each_line;
+  std::ifstream ifs{argv[1]};
+  for (std::string line; std::getline(ifs, line); line = "")
+    each_line.push_back(line);
+
+  std::string result = SearchForDNAmatch(each_line, dna_sequence);
+  std::cout << result << std::endl;
+
+  // DNA sequence for test:
+  // CAT-ATCATAATTAATTAATTAATTAATTAATTAGCTAATCAATGAATGAATGAATGACGTGTCGTATCTATCTATCTATCTATCGTCTAGTCCACGCACGCACGCACGCACGCACGCACGCACG
+  // ROSA-ATTAATCTGTAATGAATGAATGAATGAGCTCGATCTATCTATCTCGATAGATTAATTAATTAATTAATTAATTAATTAATTAATTAATTAATTAATTAATGTCCACGCACGCACGCACGCACGCACGCACGCACGCACG
+  // Ellen-ATTAATTATATCTATCATCGCGTACACGCACGCACGCACGCACGCACGCACGCACGCACGCACGCACGATTCGATTAAATGAATGAATGAATGAATGAATGCGATTAATTAATTAATTACACACACACACACACACACACACACACACACACACACACACACA
+  // Casey-AGACGGGTTACCATGACACGTACGTACGTATGAGATGAGATGAGATGAGATGAGATGCCTCGACTTCGATCGCAATGAATGCCAATAGACAAAATATTATTATTATTATTATTATTAT
+  //Amani-TATTATTATTATAACCCTGCGCGCGCGCGATCCAGCATTAGCTAGCATCAAGATGAGATGAGATGGAATTTCGAAATGAATGAATGAATGAATGAATGAATG
+  return 0;
+}
